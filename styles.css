@@ -3,7 +3,7 @@ body {
     color: #D376DA;
     font-family: 'Raleway', sans-serif;
     line-height: 1.5;
-
+    width: 100%;
 }
 
 img {
@@ -23,14 +23,14 @@ div {
 
 h1 {
     font-weight: 900;
-    padding-top: 20px;
+    padding-top: 40px;
+    margin: 0px;
 }
 
 p {
     font-size: 20px;
     font-weight: 400;
     color: #AD31B6;
-    max-width: 600px;
     margin: auto;
     padding: 20px 0px;
     text-align: justify;
@@ -40,19 +40,16 @@ p {
     div {
         max-width: 650px;
         width: 100%;
-        padding: 20px;
+        padding: 25px;
         margin: auto;
         top: 1rem;
     }
 }
 
 @media  screen and (max-width: 700px) {
+
     div {
-        max-width: 650px;
-        width: 100%;
-        padding: 20px;
-        margin: auto;
-        line-height: normal;
+        margin: 0px;
     }
     img {
         width: 260px;
