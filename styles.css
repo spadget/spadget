@@ -2,6 +2,7 @@ body {
     background-color: #9EE5E0;
     color: #D376DA;
     font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
 
 }
 
@@ -51,6 +52,7 @@ p {
         width: 100%;
         padding: 20px;
         margin: auto;
+        line-height: normal;
     }
     img {
         width: 260px;
