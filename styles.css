@@ -41,8 +41,7 @@ p {
     div {
         max-width: 650px;
         width: 100%;
-        top: 1rem;
-    }
+     }
 }
 
 @media  screen and (max-width: 700px) {
