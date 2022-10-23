@@ -59,13 +59,12 @@ p {
     }
 
     h1 {
-        padding: 0px 0px;
+        padding: 1rem 0rem;
         font-size: 2.6rem;
     }
 
     img {
         width: 260px;
-        padding-bottom: 40px;
     }
 
     p {
