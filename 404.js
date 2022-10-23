@@ -3,7 +3,7 @@ var h = document.getElementById("page").scrollHeight;
 var pad = 48;
 const mql = window.matchMedia('(max-width: 1200px)');
 
-function screenTest(e) {
+function mediaPad(e) {
   if (e.matches) {
     pad = 78;
   } else {
@@ -11,7 +11,7 @@ function screenTest(e) {
   }
 }
 
-mql.addEventListener('change', screenTest);
+mql.addEventListener('change', mediaPad);
 
 
 var full = h + pad;
@@ -24,8 +24,6 @@ var px = "px"
 var fullpx = fulltext + px
 
 document.getElementById("html").style.height = fullpx;
-
-// (function(){location.reload()}, 3000);
 
 setTimeout(function()
 {
