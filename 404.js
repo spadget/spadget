@@ -37,4 +37,4 @@ setTimeout(function()
     else
       localStorage.removeItem('firstLoad');
   }
-}, 50)();
+}, 1000)();
