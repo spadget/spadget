@@ -1,0 +1,111 @@
+body {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  font-family: 'Special Elite', 'Courier New', Courier, monospace;
+  background: #f4ebe1; 
+ 
+}
+
+h1 {
+  margin: 0px auto 50px;
+  font-family: 'Fredericka the Great', 'Times New Roman', Times, serif;
+  color: #353238;
+  font-size: 5.5rem;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  color: #353238;
+}
+
+.top-container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+
+.para {
+    margin-bottom: 20px;
+
+}
+
+.btn-container{
+    padding-bottom: 50px;
+}
+
+a.btn:link, a.btn:visited {
+  position: relative;
+  display: block;
+  width: 140px;
+  margin: 30px auto 0;
+  padding: 18px 15px 15px 15px;
+  border: 2px solid black;
+  background: rgba(255, 255, 255, 0.2);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  overflow: hidden;
+  letter-spacing: .08rem;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+a.btn:link:after, a.btn:visited:after {
+  content: "";
+  position: absolute;
+  background: none repeat scroll 0 0 black;
+  height: 0%;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  z-index: -1;
+  -webkit-transition: all .3s ease 0s;
+  -moz-transition: all .3s ease 0s;
+  -o-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+a.btn:link:hover, a.btn:visited:hover {
+  color: white;
+  text-shadow: none;
+}
+a.btn:link:hover:after, a.btn:visited:hover:after {
+  height: 420%;
+}
+
+a.btn:after {
+  opacity: .5;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+a.btn.smooth:hover:after {
+  height: 140%;
+  opacity: 1;
+}
+
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+
+}
