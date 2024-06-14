@@ -1,1 +1,1 @@
-# personal site
+# publishing site
