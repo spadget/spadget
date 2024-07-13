@@ -5,9 +5,7 @@ body {
   min-height: 100vh;
   text-align: center;
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
-  background-image: url("circlebg.gif");
-  background-color: #cccccc;
-  
+  background: #f4ebe1; 
  
 }
 
@@ -110,16 +108,4 @@ a.btn.smooth:hover:after {
   }
 
 
-}
-
-.footer { 
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    z-index: 10;
-    justify-content: center;
-    text-align: center;
-    color: #ffffff;
-    font-family: 'Special Elite', 'Courier New', Courier, monospace;
-    background: #000000; 
 }
