@@ -1,3 +1,15 @@
+:root {
+    --pink: #DEC3BE;
+    --black: #282834;
+    --white: #D2DAD6;
+    --blue: #3581B8;
+    --rose: #C62E65;
+  }
+
+body, h1, h2, h3 {
+    font-weight:normal;
+}
+
 body {
   display: flex; 
   flex-direction: column; 
@@ -5,24 +17,22 @@ body {
   min-height: 100vh;
   text-align: center;
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
-  background: #f3cfcf; 
+  background: var(--pink); 
+  color: var(--black);
 }
 
 h1 {
   margin: 0px auto 50px;
   font-family: 'Fredericka the Great', 'Times New Roman', Times, serif;
-  color: #282834;
   font-size: 5.5rem;
-  font-weight: normal;
 }
 
 h2 {
   font-size: 1.2rem;
-  font-weight: normal;
   line-height: 1.5;
   text-align: justify;
   text-justify: inter-word;
-  color: #282834;
+
 }
 
 .top-container {
@@ -52,7 +62,6 @@ a.btn:link, a.btn:visited {
   padding: 18px 15px 15px 15px;
   border: 2px solid #282834;
   background: rgba(40, 40, 52, 0);
-  /* background: #282834; */
   color: #282834;
   text-align: center;
   text-decoration: none;
@@ -81,7 +90,7 @@ a.btn:link:after, a.btn:visited:after {
   transition: all .3s ease 0s;
 }
 a.btn:link:hover, a.btn:visited:hover {
-  color: white;
+  color: #f3cfcf;
   text-shadow: none;
 }
 a.btn:link:hover:after, a.btn:visited:hover:after {
