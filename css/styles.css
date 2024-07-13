@@ -5,7 +5,7 @@ body {
   min-height: 100vh;
   text-align: center;
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
-  background: #fbd4bd
+  background: #fbd4bd center/cover url("/img/circlebg.jpg") no-repeat;
   
 }
 
