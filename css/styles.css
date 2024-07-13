@@ -5,10 +5,8 @@ body {
   min-height: 100vh;
   text-align: center;
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
-  background-image: url("circlebg.jpg");
-  background-color: #fec76f;
+  background: #fbd4bd center/cover url("/img/circlebg.jpg") no-repeat;
   
- 
 }
 
 h1 {
@@ -34,6 +32,7 @@ h2 {
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 100px;
 
 }
 
@@ -43,13 +42,13 @@ h2 {
 }
 
 .btn-container{
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 a.btn:link, a.btn:visited {
   position: relative;
   display: block;
-  width: 140px;
+  width: 320px;
   margin: 30px auto 0;
   padding: 18px 15px 15px 15px;
   border: 2px solid black;
@@ -113,13 +112,25 @@ a.btn.smooth:hover:after {
 }
 
 .footer { 
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    z-index: 10;
-    justify-content: center;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    background-color: black;
+    color: white;
     text-align: center;
-    color: #ffffff;
+    z-index: 10;
     font-family: 'Special Elite', 'Courier New', Courier, monospace;
-    background: #000000; 
+
+
+}
+
+.footer-text {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
