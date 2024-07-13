@@ -5,14 +5,13 @@ body {
   min-height: 100vh;
   text-align: center;
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
-  background: #f4ebe1; 
- 
+  background: #f3cfcf; 
 }
 
 h1 {
   margin: 0px auto 50px;
   font-family: 'Fredericka the Great', 'Times New Roman', Times, serif;
-  color: #353238;
+  color: #282834;
   font-size: 5.5rem;
   font-weight: normal;
 }
@@ -23,7 +22,7 @@ h2 {
   line-height: 1.5;
   text-align: justify;
   text-justify: inter-word;
-  color: #353238;
+  color: #282834;
 }
 
 .top-container {
@@ -32,6 +31,7 @@ h2 {
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 100px;
 
 }
 
@@ -41,22 +41,24 @@ h2 {
 }
 
 .btn-container{
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 }
 
 a.btn:link, a.btn:visited {
   position: relative;
   display: block;
-  width: 140px;
+  width: 320px;
   margin: 30px auto 0;
   padding: 18px 15px 15px 15px;
-  border: 2px solid black;
-  background: rgba(255, 255, 255, 0.2);
-  color: black;
+  border: 2px solid #282834;
+  background: rgba(40, 40, 52, 0);
+  /* background: #282834; */
+  color: #282834;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
+  line-height: 1.5;
   overflow: hidden;
   letter-spacing: .08rem;
   -webkit-transition: all .3s ease;
@@ -67,7 +69,7 @@ a.btn:link, a.btn:visited {
 a.btn:link:after, a.btn:visited:after {
   content: "";
   position: absolute;
-  background: none repeat scroll 0 0 black;
+  background: none repeat scroll 0 0 #282834;
   height: 0%;
   left: 50%;
   top: 50%;
@@ -109,3 +111,93 @@ a.btn.smooth:hover:after {
 
 
 }
+
+.footer{
+position: fixed;
+left: 0;
+
+bottom: 0;
+padding: 20px;
+width: 100%;
+
+/* max-width: 800px; */
+margin-left: auto;
+margin-right: auto;
+
+color: white;
+text-align: center;
+
+z-index: 10;
+font-family: 'Special Elite', 'Courier New', Courier, monospace;
+background: #282834; 
+
+
+}
+
+.footer-text {
+max-width: 800px;
+margin-left: auto;
+margin-right: auto;
+padding-left: 20px;
+padding-right: 20px;
+line-height: 1.5;
+font-size: 1.2rem;
+
+/* unvisited link */
+  a:link {
+    color: white;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: #f3cfcf;
+  }
+  
+  /* selected link */
+  a:active {
+    color: #f3cfcf;
+  } 
+
+
+}
+
+.icon-container {
+    font-size: 4rem;
+    color: white;
+  }
+  
+  .fa-brands {
+    margin: 10px;
+    color: white;
+    /* -webkit-text-fill-color: transparent; */
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  /* .fa-linkedin-in {
+    background: -webkit-linear-gradient(135deg, #D6FF7F 10%, #00B3CC 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .fa-facebook-f {
+    background: -webkit-linear-gradient(#D6FF7F 10%, #00B3CC 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .fa-instagram {
+    background: -webkit-linear-gradient(45deg, #D6FF7F 10%, #00B3CC 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+   */
+  .fa-brands:hover {
+    opacity: 0.5;
+    transition: 0.5s;
+  }
