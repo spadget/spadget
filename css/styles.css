@@ -6,7 +6,7 @@
     --rose: #C62E65;
   }
 
-body, h1, h2 {
+  body, h1, h2 {
     font-weight:normal;
 }
 
@@ -206,7 +206,6 @@ position: fixed;
 left: 0;
 bottom: 0;
 right: 0;
-padding: 20px;
 width: 100%;
 z-index: 10;
 background: var(--black); 
@@ -216,12 +215,20 @@ line-height: 1.5;
 font-size: 1.2rem;
 }
 
-.footer-text {
+.footer-text, .footer-text-top  {
 max-width: 800px;
 margin-left: auto;
 margin-right: auto;
 padding-left: 20px;
 padding-right: 20px;
+}
+
+.footer-text {
+    padding-bottom: 20px;
+}
+
+.footer-text-top {
+    padding-top: 20px;
 }
 
 .icon-container {
