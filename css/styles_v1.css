@@ -1,0 +1,245 @@
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+header img {
+    height: 80px;
+    margin-right: 40px;
+    display: block;
+}
+
+.logo-link {
+    display: inline-block;
+    /* makes <a> align like the image */
+    line-height: 0;
+    /* removes extra vertical spacing */
+    vertical-align: middle;
+    /* aligns logo with text */
+}
+
+:root {
+    --pink: #DEC3BE;
+    --black: #282834;
+    --white: #D2DAD6;
+    --blue: #3581B8;
+    --rose: #C62E65;
+}
+
+body,
+h1,
+h2 {
+    font-weight: normal;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    font-family: 'Special Elite', 'Courier New', Courier, monospace;
+    background: var(--pink);
+    color: var(--black);
+}
+
+.top-container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 150px;
+}
+
+h1 {
+    font-family: 'Fredericka the Great', 'Times New Roman', Times, serif;
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    line-height: 1.5;
+    min-height: 4.5rem;
+}
+
+h3,
+.para {
+    line-height: 1.5;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.2rem;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.para {
+    margin-bottom: 20px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.book {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.book img {
+    max-width: 100%;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.book p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.buy-link {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.buy-link {
+    background: #ff6600;
+    color: white;
+    margin-left: 10px;
+}
+
+.book-detail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.book-detail img {
+    max-width: 300px;
+    border-radius: 4px;
+}
+
+.book-info {
+    flex: 1;
+    min-width: 250px;
+}
+
+.back-link,
+.buy-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.book-info h2 {
+    margin-top: 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-link:hover {
+    background: #555;
+}
+
+.buy-link {
+    background: #ff6600;
+    color: white;
+    margin-left: 10px;
+}
+
+.buy-link:hover {
+    background: #e65c00;
+}
+
+.coming-soon {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px 15px;
+    border: 2px solid red;
+    color: red;
+    background-color: transparent;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.book-coming-soon {
+    font-weight: bold;
+    color: #e63946;
+}
+
+footer {
+    position: fixed;
+    background: var(--black);
+    color: var(--white);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    z-index: 10;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+footer a {
+    color: #00aced;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.icon-container {
+    display: inline-flex;
+    gap: 1rem;
+    margin-left: .5rem;
+}
+
+.icon-container a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
