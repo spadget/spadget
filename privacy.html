@@ -103,22 +103,14 @@
             handle your data, please contact us via LinkedIn message.
         </div>
     </div>
-    <footer>
-        <span>© 2025 Spadget Publishing</span>
-        <a href="privacy.html" target="_blank">Privacy Policy</a>
-        <a href="https://www.amazon.co.uk/Essential-Canterbury-Travel-Guide-Experiences-ebook/dp/B0D3F16N9B"
-            target="_blank">Buy The Essential Canterbury Travel Guide</a>
-        <span class="icon-container">
-            <a href="https://www.linkedin.com/company/spadget-publishing" i class="fa fa-brands fa-linkedin"
-                target="blank"></a>
-            <a href="https://www.facebook.com/profile.php?id=61562649484365" i class="fa fa-brands fa-facebook-f"
-                target="blank"></a>
-        </span>
-    </footer>
+    <div id="div-footer"></div>
     <script>
         const typeWriter = document.getElementById('subheading-typewriter');
         typeText(); // Start the animation
         typeWriter.style.textAlign = 'center';
+
+        // Render footer
+        createFooter("div-footer");
     </script>
 </body>
 
