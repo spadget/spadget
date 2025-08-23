@@ -1,54 +1,45 @@
-:root {
-    --pink: #DEC3BE;
-    --black: #282834;
-    --white: #D2DAD6;
-    --blue: #3581B8;
-    --rose: #C62E65;
-  }
+header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-  body, h1, h2 {
-    font-weight:normal;
+header img {
+  height: 80px;
+  margin-right: 40px;
+  display: block;
+}
+
+.logo-link {
+  display: inline-block;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+:root {
+  --pink: #DEC3BE;
+  --black: #282834;
+  --white: #D2DAD6;
+  --blue: #3581B8;
+  --rose: #C62E65;
+}
+
+body,
+h1,
+h2 {
+  font-weight: normal;
 }
 
 body {
-  display: flex; 
-  flex-direction: column; 
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   min-height: 100vh;
   text-align: center;
   font-family: 'Special Elite', 'Courier New', Courier, monospace;
-  background: var(--pink); 
+  background: var(--pink);
   color: var(--black);
-}
-
-h1 {
-  margin: 0px auto 30px;
-  font-family: 'Fredericka the Great', 'Times New Roman', Times, serif;
-  font-size: 5.5rem;
-
-  
-}
-
-h2 {
-    font-size: 1.5rem;
-    text-align: left;
-    line-height: 1.5;
-    min-height: 4.5rem;
-}
-
-h3, .para {
-    line-height: 1.5;
-    text-align: justify;
-    text-justify: inter-word;
-    font-size: 1.2rem;
-}
-
-h3 {
-    font-weight:bold;
-}
-
-.para {
-    margin-bottom: 20px;
+  margin: 0;
 }
 
 .top-container {
@@ -57,222 +48,247 @@ h3 {
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 230px;
+  padding-bottom: 150px;
 }
 
-.subheading:after {
-    content: "";
-    animation: typewriter 5s linear 1;
-    animation-fill-mode: forwards;
-  }
-
-@keyframes typewriter {
-    0% {content: "E";}
-    1% {content: "En";}
-    2% {content: "Enl";}
-    3% {content: "Enli";}
-    4% {content: "Enlig";}
-    5% {content: "Enligh";}
-    6% {content: "Enlight";}
-    7% {content: "Enlighte";}
-    8% {content: "Enlighten";}
-    9% {content: "Enlighteni";}
-    10% {content: "Enlightenin";}
-    11% {content: "Enlightening";}
-    12% {content: "Enlightening ";}
-    15% {content: "Enlightening a";}
-    16% {content: "Enlightening an";}
-    17% {content: "Enlightening and";}
-    18% {content: "Enlightening and ";}
-    21% {content: "Enlightening and e";}
-    22% {content: "Enlightening and ed";}
-    23% {content: "Enlightening and edu";}
-    24% {content: "Enlightening and educ";}
-    25% {content: "Enlightening and educa";}
-    26% {content: "Enlightening and educat";}
-    27% {content: "Enlightening and educati";}
-    28% {content: "Enlightening and educatin";}
-    29% {content: "Enlightening and educating";}
-    30% {content: "Enlightening and educating ";}
-    33% {content: "Enlightening and educating r";}
-    34% {content: "Enlightening and educating re";}
-    35% {content: "Enlightening and educating rea";}
-    36% {content: "Enlightening and educating read";}
-    37% {content: "Enlightening and educating reade";}
-    38% {content: "Enlightening and educating reader";}
-    39% {content: "Enlightening and educating readers";}
-    40% {content: "Enlightening and educating readers ";}
-    43% {content: "Enlightening and educating readers t";}
-    44% {content: "Enlightening and educating readers th";}
-    45% {content: "Enlightening and educating readers thr";}
-    46% {content: "Enlightening and educating readers thro";}
-    47% {content: "Enlightening and educating readers throu";}
-    48% {content: "Enlightening and educating readers throug";}
-    49% {content: "Enlightening and educating readers through";}
-    50% {content: "Enlightening and educating readers through ";}
-    53% {content: "Enlightening and educating readers through i";}
-    54% {content: "Enlightening and educating readers through im";}
-    55% {content: "Enlightening and educating readers through imp";}
-    56% {content: "Enlightening and educating readers through impa";}
-    57% {content: "Enlightening and educating readers through impac";}
-    58% {content: "Enlightening and educating readers through impact";}
-    59% {content: "Enlightening and educating readers through impactf";}
-    60% {content: "Enlightening and educating readers through impactfu";}
-    61% {content: "Enlightening and educating readers through impactful";}
-    62% {content: "Enlightening and educating readers through impactful ";}
-    65% {content: "Enlightening and educating readers through impactful n";}
-    66% {content: "Enlightening and educating readers through impactful no";}
-    67% {content: "Enlightening and educating readers through impactful non";}
-    68% {content: "Enlightening and educating readers through impactful non-";}
-    69% {content: "Enlightening and educating readers through impactful non-f";}
-    70% {content: "Enlightening and educating readers through impactful non-fi";}
-    71% {content: "Enlightening and educating readers through impactful non-fic";}
-    72% {content: "Enlightening and educating readers through impactful non-fict";}
-    73% {content: "Enlightening and educating readers through impactful non-ficti";}
-    74% {content: "Enlightening and educating readers through impactful non-fictio";}
-    75% {content: "Enlightening and educating readers through impactful non-fiction";}
-    76% {content: "Enlightening and educating readers through impactful non-fiction ";}
-    77% {content: "Enlightening and educating readers through impactful non-fiction w";}
-    78% {content: "Enlightening and educating readers through impactful non-fiction wo";}
-    79% {content: "Enlightening and educating readers through impactful non-fiction wor";}
-    80% {content: "Enlightening and educating readers through impactful non-fiction work";}
-    81% {content: "Enlightening and educating readers through impactful non-fiction works";}
-    95% {content: "Enlightening and educating readers through impactful non-fiction works.";}
-    100% {content: "Enlightening and educating readers through impactful non-fiction works.";}
-  }
-
-.btn-container{
-    padding-bottom: 20px;
+h1 {
+  font-family: 'Fredericka the Great', 'Times New Roman', Times, serif;
+  font-size: 3.5rem;
 }
 
-a.btn:link, a.btn:visited {
-  position: relative;
-  display: block;
-  width: 320px;
-  margin: 30px auto 0;
-  padding: 18px 15px 15px 15px;
-  border: 2px solid var(--black);
-  background: rgba(40, 40, 52, 0);
-  color: var(--black);
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: bold;
+h2 {
+  font-size: 1.5rem;
+  text-align: left;
   line-height: 1.5;
-  overflow: hidden;
-  letter-spacing: .08rem;
-  -webkit-transition: all .3s ease;
-  -moz-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
+  min-height: 4.5rem;
 }
-a.btn:link:after, a.btn:visited:after {
-  content: "";
-  position: absolute;
-  background: none repeat scroll 0 0 var(--black);
-  height: 0%;
-  left: 50%;
-  top: 50%;
+
+h3,
+.para {
+  line-height: 1.5;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+.para {
+  margin-bottom: 20px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20px;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.item {
+  background: #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.book {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.book img {
+  max-width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.book p {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.buy-link {
+  display: inline-block;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.buy-link {
+  background: #ff6600;
+  color: white;
+  margin-left: 10px;
+}
+
+.book-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.book-detail img {
+  max-width: 300px;
+  border-radius: 4px;
+}
+
+.book-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.back-link,
+.buy-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.book-info h2 {
+  margin-top: 0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.back-link:hover {
+  background: #555;
+}
+
+.buy-link {
+  background: #ff6600;
+  color: white;
+  margin-left: 10px;
+}
+
+.buy-link:hover {
+  background: #e65c00;
+}
+
+.coming-soon {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 10px 15px;
+  border: 2px solid red;
+  color: red;
+  background-color: transparent;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.book-coming-soon {
+  font-weight: bold;
+  color: #e63946;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
-  z-index: -1;
-  -webkit-transition: all .3s ease 0s;
-  -moz-transition: all .3s ease 0s;
-  -o-transition: all .3s ease 0s;
-  transition: all .3s ease 0s;
-}
-a.btn:link:hover, a.btn:visited:hover {
+  background: var(--black);
   color: var(--white);
-  text-shadow: none;
-  font-weight: normal;
-}
-a.btn:link:hover:after, a.btn:visited:hover:after {
-  height: 420%;
-}
-
-a.btn:after {
-  opacity: .5;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-}
-a.btn.smooth:hover:after {
-  height: 140%;
-  opacity: 1;
+  padding: 15px 0;
+  z-index: 10;
+  font-size: 16px;
+  line-height: 1.5;
+  /* font-size: 1.2rem; */
 }
 
-.footer{
-position: fixed;
-left: 0;
-bottom: 0;
-right: 0;
-width: 100%;
-z-index: 10;
-background: var(--black); 
-color: var(--white);
-text-align: center;
-line-height: 1.5;
-font-size: 1.2rem;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.footer-text, .footer-text-top  {
-max-width: 800px;
-margin-left: auto;
-margin-right: auto;
-padding-left: 20px;
-padding-right: 20px;
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
 }
 
-.footer-text {
-    padding-bottom: 20px;
+.footer-left {
+  text-align: left;
 }
 
-.footer-text-top {
-    padding-top: 20px;
+.footer-center {
+  text-align: center;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-container a {
+  color: #0af;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+footer a {
+  color: #00aced;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 .icon-container {
-    font-size: 2rem;
-    color: var(--white);
-    padding: 10px 0px 5px 0px;
-  }
-  
-   a:link {
-    color: var(--white);
-    text-decoration: none;
-    transition: 0.5s;
-  }
-  
-  a:visited {
-    color: var(--white);
-    text-decoration: none;
-    transition: 0.5s;
-  }
-  
-  a:hover {
-    color: var(--pink);
-    text-decoration: none;
-    opacity: 0.9;
-    transition: 0.5s;
-  }
-  
-  a:active {
-    color: var(--pink);
-    text-decoration: none;
-    transition: 0.5s;
-  } 
+  display: inline-flex;
+  gap: 14px;
+  margin-left: .5rem;
+}
 
+.icon-container a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
 
-  @media only screen and (max-width: 500px) {
-    h1 {
-      font-size: 4rem;
-    }
-  
-    h2 {
-      font-size: 1.1rem;
-    }
-  
-    h3, .para, .footer-text {
-      font-size: 1rem;
-    }
+/* Mobile First - stack layout on small screens */
+@media (max-width: 480px) {
+  footer {
+      /* flex-direction: column; */
+      font-size: 12px;
   }
+}
+
+@media (max-width: 768px) {
+  .book-grid {
+      grid-template-columns: 1fr;
+  }
+}

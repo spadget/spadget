@@ -16,7 +16,7 @@ const bookCollection = [
         cover: "canterbury_travel_guide.jpg",
         description: "Insider Tips, Authentic Experiences and a Free Self-Guided Walking Tour of the City.",
         link: "canterbury_travel_guide.html",
-        saleLink: "https://www.amazon.co.uk/Essential-Canterbury-Travel-Guide-Experiences-ebook/dp/B0D3F16N9B",        
+        saleLink: "https://www.amazon.co.uk/Essential-Canterbury-Travel-Guide-Experiences-ebook/dp/B0D3F16N9B",
         status: "for-sale",
         author: "Bow Harrison",
         genre: "Travel guide",
@@ -53,7 +53,7 @@ function getBooks() {
     return bookCollection;
 }
 
-function createBookList(containerId){
+function createBookList(containerId) {
     const container = document.getElementById(containerId);
 
     const books = getBooks();
@@ -157,7 +157,7 @@ function createContainer(book) {
 
     if (book.status == 'for-sale') {
 
-        if (book.saleLink != null && book.saleLink.length > 0){
+        if (book.saleLink != null && book.saleLink.length > 0) {
             const saleLink = document.createElement('a');
             saleLink.href = book.saleLink;
             saleLink.target = "_blank"
@@ -184,6 +184,7 @@ function createContainer(book) {
 }
 
 function createFooter(containerId) {
+
     if (!document.querySelector('link[href*="font-awesome"], link[href*="fontawesome"]')) {
         const fa = document.createElement('link');
         fa.rel = 'stylesheet';
@@ -193,30 +194,32 @@ function createFooter(containerId) {
     }
 
     const root = containerId ? document.getElementById(containerId) : document.body;
-    const footer = document.createElement('footer');
+    const footer = document.createElement('footer');     
 
-    // © 2025 Spadget Publishing
-    const copyrightSpan = document.createElement("span");
-    copyrightSpan.textContent = "© 2025 Spadget Publishing";
-    footer.appendChild(copyrightSpan);
+    // Footer container (flexbox)
+    const footerContainer = document.createElement("div");
+    footerContainer.className = "footer-container";
 
-    // Privacy Policy link
+    // Left section
+    const footerLeft = document.createElement("div");
+    footerLeft.className = "footer-left";
+    footerLeft.textContent = "© 2025 Spadget Publishing";
+
+    // Center section
+    const footerCenter = document.createElement("div");
+    footerCenter.className = "footer-center";
     const privacyLink = document.createElement("a");
     privacyLink.href = "privacy.html";
-    privacyLink.target = "_blank";
     privacyLink.textContent = "Privacy Policy";
-    footer.appendChild(privacyLink);
+    footerCenter.appendChild(privacyLink);
 
-    // Buy link
-    const buyLink = document.createElement("a");
-    buyLink.href = "https://www.amazon.co.uk/Essential-Canterbury-Travel-Guide-Experiences-ebook/dp/B0D3F16N9B";
-    buyLink.target = "_blank";
-    buyLink.textContent = "Buy The Essential Canterbury Travel Guide";
-    footer.appendChild(buyLink);
+    // Right section (social icons)
+    const footerRight = document.createElement("div");
+    footerRight.className = "footer-right";
 
     // Icon container
     const iconContainer = document.createElement("span");
-    iconContainer.className = "icon-container";    
+    iconContainer.className = "icon-container";
 
     const linkedin = document.createElement("a");
     linkedin.href = "https://www.linkedin.com/company/spadget-publishing";
@@ -234,7 +237,14 @@ function createFooter(containerId) {
 
     iconContainer.appendChild(linkedin);
     iconContainer.appendChild(facebook);
-    footer.appendChild(iconContainer);
-    
+
+    footerRight.appendChild(iconContainer);   
+
+    // Append sections
+    footerContainer.appendChild(footerLeft);
+    footerContainer.appendChild(footerCenter);
+    footerContainer.appendChild(footerRight);
+
+    footer.appendChild(footerContainer);
     root.appendChild(footer);
 }
