@@ -279,11 +279,49 @@ footer a:hover {
   font-size: 18px;
 }
 
-/* Mobile First - stack layout on small screens */
 @media (max-width: 480px) {
   footer {
-      /* flex-direction: column; */
       font-size: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-container {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+      flex: unset;
+      text-align: center;
+  }
+
+  .footer-right a {
+      font-size: 1.2rem;
+      margin: 0 5px;
+  }
+
+  body {
+      font-size: 14px;
+  }
+
+  header h1 {
+      font-size: 20px;
+  }
+
+  .book-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+  }
+
+  .book-grid img {
+      max-width: 90%;
+      height: auto;
   }
 }
 
