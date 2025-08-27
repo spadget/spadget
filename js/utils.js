@@ -1,3 +1,11 @@
+function createHeader(containerId) {
+    const container = containerId ? document.getElementById(containerId) : document.body;
+    const headerText = document.createElement("h1");
+    headerText.textContent = "Spadget Publishing";
+
+    container.appendChild(headerText);
+}
+
 const textToType = "Enlightening and educating readers through impactful non-fiction works.";
 let charIndex = 0;
 
@@ -194,7 +202,7 @@ function createFooter(containerId) {
     }
 
     const root = containerId ? document.getElementById(containerId) : document.body;
-    const footer = document.createElement('footer');     
+    const footer = document.createElement('footer');
 
     // Footer container (flexbox)
     const footerContainer = document.createElement("div");
@@ -203,20 +211,11 @@ function createFooter(containerId) {
     // Left section
     const footerLeft = document.createElement("div");
     footerLeft.className = "footer-left";
-    footerLeft.textContent = "© 2025 Spadget Publishing";
+    footerLeft.textContent = "Spadget Publishing 2025";
 
-    // Center section
+    // Center section (social icons)
     const footerCenter = document.createElement("div");
     footerCenter.className = "footer-center";
-    const privacyLink = document.createElement("a");
-    privacyLink.href = "privacy.html";
-    privacyLink.textContent = "Privacy Policy";
-    footerCenter.appendChild(privacyLink);
-
-    // Right section (social icons)
-    const footerRight = document.createElement("div");
-    footerRight.className = "footer-right";
-
     // Icon container
     const iconContainer = document.createElement("span");
     iconContainer.className = "icon-container";
@@ -238,7 +237,16 @@ function createFooter(containerId) {
     iconContainer.appendChild(linkedin);
     iconContainer.appendChild(facebook);
 
-    footerRight.appendChild(iconContainer);   
+    footerCenter.appendChild(iconContainer);
+
+    // Right section
+    const footerRight = document.createElement("div");
+    footerRight.className = "footer-right";
+    const privacyLink = document.createElement("a");
+    privacyLink.href = "privacy.html";
+    privacyLink.textContent = "Privacy Policy";
+    privacyLink.target = "_blank"
+    footerRight.appendChild(privacyLink);
 
     // Append sections
     footerContainer.appendChild(footerLeft);

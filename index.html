@@ -50,12 +50,13 @@
 
 <body>
     <div class="top-container">
-        <header>
+        <!-- <header>
             <a href="https://spadget.com" class="logo-link">
                 <img src="assets/images/logo.png" alt="Spadget Publishing">
             </a>
             <h1>Spadget Publishing</h1>
-        </header>
+        </header> -->
+        <div id="div-header"></div>
         <h2 id="subheading-typewriter"></h2>
         <div class="para">
             At Spadget Publishing, we are dedicated to publishing insightful and impactful non-fiction works that
@@ -84,10 +85,13 @@
     <div id="div-footer"></div>
 
     <script>
+        // Render header
+        createHeader("div-header");
+
         // Render typeWriter
         const typeWriter = document.getElementById('subheading-typewriter');
         typeText(); // Start the animation
-        typeWriter.style.textAlign = 'center';
+        typeWriter.style.textAlign = 'left';
 
         // Render books
         createBookList("book-container");

@@ -25,25 +25,24 @@
         gtag('js', new Date());
         gtag('config', 'G-Y8ZDK3LY24');
         gtag('config', 'UA-189680488-1');        
-    </script>    
+    </script>
 </head>
 
 <body>
     <div class="top-container">
-        <header>
-            <a href="https://spadget.com" class="logo-link">
-                <img src="assets/images/logo.png" alt="Spadget Publishing">
-            </a>
-            <h1>Spadget Publishing</h1>
-        </header>
+        <div id="div-header"></div>
         <h2 id="subheading-typewriter"></h2>
         <div id="bookContainer" class="book-detail"></div>
     </div>
     <div id="div-footer"></div>
     <script>
+        // Render header
+        createHeader("div-header");
+
+        // Render typeWriter
         const typeWriter = document.getElementById('subheading-typewriter');
         typeText(); // Start the animation
-        typeWriter.style.textAlign = 'center';
+        typeWriter.style.textAlign = 'left';
 
         // Book data
         const bookIndex = 2;
