@@ -20,6 +20,7 @@ function typeText() {
 // Book data
 const bookCollection = [
     {
+        id: 1,
         title: "The Essential Canterbury Travel Guide",
         cover: "canterbury_travel_guide.jpg",
         description: "Insider Tips, Authentic Experiences and a Free Self-Guided Walking Tour of the City.",
@@ -32,18 +33,7 @@ const bookCollection = [
         fullDescription: "The City of Canterbury is one of the most culturally significant cities in the UK. There is so much to see, do and experience and an online search only scratches the surface.This isn't a standard list of attractions but an insight into what makes Canterbury such a wonderful place to be.", status: "for-sale",
     },
     {
-        title: "Cognitive Behavioural Therapy for Insomnia",
-        cover: "cognitive_behavioural_therapy_for_insomnia.jpg",
-        description: "Transform your nights and reclaim your days with this practical, science-backed guide to better sleep.",
-        link: "cognitive_behavioural_therapy_for_insomnia.html",
-        saleLink: "",
-        status: "coming-soon",
-        author: "Lydia Blooth",
-        genre: "Therapy guide",
-        published: "",
-        fullDescription: "Whether your insomnia is new or long-standing, Cognitive Behavioural Therapy for Insomnia offers step-by-step tools, easy exercises, and actionable advice to guide you toward deep, natural sleep—night after night.",
-    },
-    {
+        id: 2,
         title: "The Adult ADHD Mind",
         cover: "the_adult_adhd_mind.jpg",
         description: "Unlock your full potential and thrive with strategies designed for the unique challenges of adult ADHD.",
@@ -54,11 +44,29 @@ const bookCollection = [
         genre: "Therapy guide",
         published: "",
         fullDescription: "Whether you’re navigating daily responsibilities, pursuing ambitious goals, or seeking a greater sense of balance, The Adult ADHD Mind is your companion for transforming challenges into opportunities for growth and achievement.",
+    },
+    {
+        id: 3,
+        title: "Cognitive Behavioural Therapy for Insomnia",
+        cover: "cognitive_behavioural_therapy_for_insomnia.jpg",
+        description: "Transform your nights and reclaim your days with this practical, science-backed guide to better sleep.",
+        link: "cognitive_behavioural_therapy_for_insomnia.html",
+        saleLink: "",
+        status: "coming-soon",
+        author: "Lydia Blooth",
+        genre: "Therapy guide",
+        published: "",
+        fullDescription: "Whether your insomnia is new or long-standing, Cognitive Behavioural Therapy for Insomnia offers step-by-step tools, easy exercises, and actionable advice to guide you toward deep, natural sleep—night after night.",
     }
 ];
 
 function getBooks() {
     return bookCollection;
+}
+
+function getBook(bookId) {
+    const book = bookCollection.find(b => b.id === bookId);
+    return book;
 }
 
 function createBookList(containerId) {

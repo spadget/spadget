@@ -47,12 +47,12 @@
         typeWriter.style.textAlign = 'left';
 
         // Book data
-        const bookIndex = 1;
-        const books = getBooks();
+        const bookId = 3;
+        const book = getBook(bookId);
 
         // Render book details
         const container = document.getElementById('bookContainer');
-        container.appendChild(createContainer(books[bookIndex]));
+        container.appendChild(createContainer(book));
 
         // Render footer
         createFooter("div-footer");
