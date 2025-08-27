@@ -33,7 +33,7 @@
 <body>
     <div class="top-container">
         <div id="div-header"></div>
-        <h2 id="subheading-typewriter"></h2>
+        <h2 id="subheading-typewriter" class="typewriter"></h2>
         <div id="bookContainer" class="book-detail"></div>
     </div>
     <div id="div-footer"></div>
@@ -43,8 +43,7 @@
 
         // Render typeWriter
         const typeWriter = document.getElementById('subheading-typewriter');
-        typeText(); // Start the animation
-        typeWriter.style.textAlign = 'left';
+        typeText(); // Start the animation    
 
         // Book data
         const bookId = 2;

@@ -90,6 +90,7 @@ function createBookList(containerId) {
         link.appendChild(img);
         bookDiv.appendChild(link);
 
+        /*
         const desc = document.createElement('p');
         desc.textContent = book.description;
         bookDiv.appendChild(desc);
@@ -117,7 +118,7 @@ function createBookList(containerId) {
             comingSoonSpan.textContent = "Coming Soon";
             comingSoonSpan.classList.add('coming-soon');
             bookDiv.appendChild(comingSoonSpan);
-        }
+        }*/
 
         container.appendChild(bookDiv);
     });

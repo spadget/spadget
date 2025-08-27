@@ -59,7 +59,7 @@
             <h1>Spadget Publishing</h1>
         </header> -->
         <div id="div-header"></div>
-        <h2 id="subheading-typewriter"></h2>
+        <h2 id="subheading-typewriter" class="typewriter"></h2>
         <div class="para">
             At Spadget Publishing, we are dedicated to publishing insightful and impactful non-fiction works that
             enlighten, educate, and inspire readers. As a newly established publisher, we are thrilled to introduce our
@@ -92,8 +92,7 @@
 
         // Render typeWriter
         const typeWriter = document.getElementById('subheading-typewriter');
-        typeText(); // Start the animation
-        typeWriter.style.textAlign = 'left';
+        typeText(); // Start the animation        
 
         // Render books
         createBookList("book-container");
