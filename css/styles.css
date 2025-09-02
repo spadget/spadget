@@ -27,8 +27,8 @@ header {
     --black: #3C4A5C
 }
 
-.typewriter {    
-    color : var(--green);
+.typewriter {
+    color: var(--green);
     text-align: justify;
     font-family: monospace;
 }
@@ -56,9 +56,9 @@ body {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 150px;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-bottom: 9.375rem;
 }
 
 h1 {
@@ -89,13 +89,13 @@ h3 {
 }
 
 .para {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .book-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     gap: 1rem;
 }
 
@@ -123,19 +123,19 @@ h3 {
 }
 
 .book p {
-    font-size: 14px;
+    font-size: 0.875rem;
     color: #333;
-    margin-top: 10px;
+    margin-top: 0.625rem;
 }
 
 .buy-link {
     display: inline-block;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 0.938rem;
+    margin-bottom: 0.938rem;
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
-    padding: 12px 24px;
+    padding: 0.75rem 1.5rem;
     border-radius: 6px;
     transition: background-color 0.2s ease;
 }
@@ -143,20 +143,21 @@ h3 {
 .buy-link {
     background: #ff6600;
     color: white;
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
 
 .book-detail {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;    
+    gap: 20px;
     background: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .book-detail img {
-    max-width: 300px;
+    max-width: 100%;
+    height: auto;
     border-radius: 4px;
 }
 
@@ -168,8 +169,8 @@ h3 {
 .back-link,
 .buy-link {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 15px;
+    margin-top: 1.25rem;
+    padding: 0.625rem 0.938rem;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -180,8 +181,8 @@ h3 {
 
 .back-link {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 15px;
+    margin-top: 1.25rem;
+    padding: 0.625rem 0.938rem;
     background: #333;
     color: white;
     text-decoration: none;
@@ -195,7 +196,7 @@ h3 {
 .buy-link {
     background: #ff6600;
     color: white;
-    margin-left: 10px;
+    margin-left: 0.625rem;
 }
 
 .buy-link:hover {
@@ -204,9 +205,9 @@ h3 {
 
 .coming-soon {
     display: inline-block;
-    margin-top: 20px;
-    margin-left: 10px;
-    padding: 10px 15px;
+    margin-top: 1.25rem;
+    margin-left: 0.625rem;
+    padding: 0.625rem 0.938rem;
     border: 2px solid red;
     color: red;
     background-color: transparent;
@@ -227,7 +228,7 @@ footer {
     width: 100%;
     background: var(--black);
     color: var(--white);
-    padding: 15px 0;
+    padding: 0.938rem 0;
     z-index: 10;
     line-height: 1.5;
     font-family: monospace;
@@ -240,7 +241,7 @@ footer {
     align-items: center;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
 .footer-left,
@@ -263,7 +264,7 @@ footer {
 
 .footer-container a {
     color: var(--green);
-    margin-left: 10px;
+    margin-left: 0.625rem;
     text-decoration: none;
     transition: color 1s ease;
 }
@@ -271,7 +272,7 @@ footer {
 footer a {
     color: var(--green);
     text-decoration: none;
-    margin: 0 6px;
+    margin: 0 0.375rem;
     transition: color 1s ease;
 }
 
@@ -289,16 +290,43 @@ footer a:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 @media (max-width: 480px) {
     footer {
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 }
 
 @media (max-width: 600px) {
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    body {
+        font-size: 0.875rem;
+    }
+
+    .book-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .book-detail {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.563rem;
+    }
+
+    .book img,
+    .book-grid img,
+    .book-detail img {
+        width: 100%;
+    }
+
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -314,31 +342,15 @@ footer a:hover {
 
     .footer-right a {
         font-size: 1.2rem;
-        margin: 0 5px;
+        margin: 0 0.313rem;
     }
-
-    body {
-        font-size: 14px;
-    }
-
-    header h1 {
-        font-size: 20px;
-    }
-
-    .book-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
-    /* .book-grid img {
-        max-width: 90%;
-        height: auto;
-    } */
 }
 
 @media (max-width: 768px) {
+    .typewriter {
+        text-align: center;
+    }
+
     .book-grid {
         grid-template-columns: 1fr;
     }
