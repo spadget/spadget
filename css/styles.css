@@ -65,7 +65,8 @@ h1 {
     font-family: "Averia Serif Libre", serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 3.7rem;
+    font-size: 5.5rem;
+    margin: 3.75rem 0 1.875rem 0;
 }
 
 h2 {
@@ -76,7 +77,8 @@ h2 {
 }
 
 h3,
-.para {
+.para,
+.para-last {
     line-height: 1.5;
     text-align: justify;
     text-justify: inter-word;
@@ -90,6 +92,10 @@ h3 {
 
 .para {
     margin-bottom: 1.25rem;
+}
+
+.para-last {
+    padding-bottom: 4.375rem;
 }
 
 .book-grid {
