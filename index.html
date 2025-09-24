@@ -22,11 +22,13 @@
 <html lang="en">
 
 <head>
-    <title>Spadget Publishing</title>
+    <title>Spadget Publishing - Insightful and impactful non-fiction works</title>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!-- responsive thing -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Spadget Publishing offers insightful non-fiction works. Discover our debut release, The Essential Canterbury Travel Guide, crafted to enlighten and inspire.">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +39,7 @@
     <script src="https://kit.fontawesome.com/5ee676b89d.js" crossorigin="anonymous"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/settings.js"></script>
     <script src="js/utils.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8ZDK3LY24"></script>
@@ -99,6 +102,11 @@
 
         // Render footer
         createFooter("div-footer");
+
+        // Inject site-wide JSON-LD for SEO
+        injectSiteJsonLd();
+        injectBookListSchema();
+
     </script>
 </body>
 

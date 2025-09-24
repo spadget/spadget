@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /private/       # block any private folder if exists
+Allow: /
+
+# Point to sitemap
+Sitemap: https://spadget.com/sitemap.xml

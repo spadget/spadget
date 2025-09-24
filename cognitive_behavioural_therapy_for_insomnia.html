@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>Book Details - Spadget Publishing</title>
+    <title>Spadget Publishing - Cognitive Behavioural Therapy for Insomnia</title>
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <!-- responsive thing -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cognitive Behavioural Therapy for Insomnia provides practical tools and exercises to help you achieve deep, natural sleep—night after night.">
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +19,7 @@
     <script src="https://kit.fontawesome.com/5ee676b89d.js" crossorigin="anonymous"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/settings.js"></script>
     <script src="js/utils.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y8ZDK3LY24"></script>
@@ -51,7 +54,7 @@
 
         // Render book details
         const container = document.getElementById('bookContainer');
-        container.appendChild(createContainer(book));
+        container.appendChild(createBookContainer(book));
 
         // Render footer
         createFooter("div-footer");

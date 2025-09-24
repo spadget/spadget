@@ -1,7 +1,9 @@
+const siteName = SITE_SETTINGS.siteName;
+
 function createHeader(containerId) {
     const container = containerId ? document.getElementById(containerId) : document.body;
     const headerText = document.createElement("h1");
-    headerText.textContent = "Spadget Publishing";
+    headerText.textContent = siteName;
 
     container.appendChild(headerText);
 }
@@ -18,47 +20,8 @@ function typeText() {
 }
 
 // Book data
-const bookCollection = [
-    {
-        id: 1,
-        title: "The Essential Canterbury Travel Guide",
-        cover: "canterbury_travel_guide.jpg",
-        description: "Insider Tips, Authentic Experiences and a Free Self-Guided Walking Tour of the City.",
-        link: "canterbury_travel_guide.html",
-        saleLink: "https://www.amazon.co.uk/Essential-Canterbury-Travel-Guide-Experiences-ebook/dp/B0D3F16N9B",
-        status: "for-sale",
-        author: "Bow Harrison",
-        genre: "Travel guide",
-        published: "June 5, 2024",
-        fullDescription: "The City of Canterbury is one of the most culturally significant cities in the UK. There is so much to see, do and experience and an online search only scratches the surface.This isn't a standard list of attractions but an insight into what makes Canterbury such a wonderful place to be.", status: "for-sale",
-    },
-    {
-        id: 2,
-        title: "The Adult ADHD Mind",
-        cover: "the_adult_adhd_mind.jpg",
-        description: "Unlock your full potential and thrive with strategies designed for the unique challenges of adult ADHD.",
-        link: "the_adult_adhd_mind.html",
-        saleLink: "",
-        status: "coming-soon",
-        author: "Lydia Blooth",
-        genre: "Therapy guide",
-        published: "",
-        fullDescription: "Whether you’re navigating daily responsibilities, pursuing ambitious goals, or seeking a greater sense of balance, The Adult ADHD Mind is your companion for transforming challenges into opportunities for growth and achievement.",
-    },
-    {
-        id: 3,
-        title: "Cognitive Behavioural Therapy for Insomnia",
-        cover: "cognitive_behavioural_therapy_for_insomnia.jpg",
-        description: "Transform your nights and reclaim your days with this practical, science-backed guide to better sleep.",
-        link: "cognitive_behavioural_therapy_for_insomnia.html",
-        saleLink: "",
-        status: "coming-soon",
-        author: "Lydia Blooth",
-        genre: "Therapy guide",
-        published: "",
-        fullDescription: "Whether your insomnia is new or long-standing, Cognitive Behavioural Therapy for Insomnia offers step-by-step tools, easy exercises, and actionable advice to guide you toward deep, natural sleep—night after night.",
-    }
-];
+const publishingBy = "by " + siteName;
+const bookCollection = SITE_SETTINGS.bookCollection;
 
 function getBooks() {
     return bookCollection;
@@ -85,7 +48,7 @@ function createBookList(containerId) {
 
         const img = document.createElement('img');
         img.src = imgPath + book.cover;
-        img.alt = book.title;
+        img.alt = book.title + ' ' + publishingBy;
 
         link.appendChild(img);
         bookDiv.appendChild(link);
@@ -136,12 +99,12 @@ function createParagraph(label, property) {
     return paragraph;
 }
 
-function createContainer(book) {
+function createBookContainer(book) {
     const imgPath = "assets/images/";
     const img = document.createElement('img');
 
     img.src = imgPath + book.cover;
-    img.alt = book.title;
+    img.alt = book.title + ' ' + publishingBy;
     container.appendChild(img);
 
     const bookDiv = document.createElement('div');
@@ -197,6 +160,8 @@ function createContainer(book) {
         bookDiv.appendChild(comingSoonSpan);
     }
 
+    injectBookJsonLd(book);
+
     return bookDiv;
 }
 
@@ -220,7 +185,7 @@ function createFooter(containerId) {
     // Left section
     const footerLeft = document.createElement("div");
     footerLeft.className = "footer-left";
-    footerLeft.textContent = "Spadget Publishing 2025";
+    footerLeft.textContent = siteName + " 2025";
 
     // Center section (social icons)
     const footerCenter = document.createElement("div");
@@ -229,15 +194,18 @@ function createFooter(containerId) {
     const iconContainer = document.createElement("span");
     iconContainer.className = "icon-container";
 
+    const socialLinks = SITE_SETTINGS.socialLinks;
+
     const linkedin = document.createElement("a");
-    linkedin.href = "https://www.linkedin.com/company/spadget-publishing";
+    linkedin.href = socialLinks.linkedin;
+
     linkedin.target = "_blank";
     const linkedinIcon = document.createElement("i");
     linkedinIcon.className = "fa-brands fa-linkedin";
     linkedin.appendChild(linkedinIcon);
 
     const facebook = document.createElement("a");
-    facebook.href = "https://www.facebook.com/profile.php?id=61562649484365";
+    facebook.href = socialLinks.facebook;
     facebook.target = "_blank";
     const facebookIcon = document.createElement("i");
     facebookIcon.className = "fa-brands fa-facebook-f";
@@ -264,4 +232,80 @@ function createFooter(containerId) {
 
     footer.appendChild(footerContainer);
     root.appendChild(footer);
+}
+
+// SEO 
+
+// JSON-LD injection
+const siteUrl = SITE_SETTINGS.siteURL + '/';
+
+// Main website schema info
+function injectSiteJsonLd() {
+    const data = {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": siteName,
+        "url": siteUrl,
+        "description": siteName + " offers insightful non-fiction works. Discover our debut release, The Essential Canterbury Travel Guide, crafted to enlighten and inspire.",
+        "publisher": {
+            "@type": "Organization",
+            "name": siteName,
+            "logo": {
+                "@type": "ImageObject",
+                "url": siteUrl + "assets/images/logo.png"  //  need a new version logo..similar to favicon.ico
+            }
+        },
+        // uncomment later if site implement search using https://spadget.com/search?q={search_term_string} 
+        // "potentialAction": {
+        //     "@type": "SearchAction",
+        //     "target": siteUrl + "search?q={search_term_string}",
+        //     "query-input": "required name=search_term_string"
+        // }
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(data);
+    document.head.appendChild(script);
+}
+
+// Minimal book schema info to include in index book collection
+function injectBookListSchema() {
+    const currentBooks = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": siteName + " Books",
+        "itemListOrder": "http://schema.org/ItemListOrderAscending",
+        "itemListElement": bookCollection.map((book, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "url": siteUrl + book.link,
+        }))
+    };
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(currentBooks, null, 2);
+
+    document.head.appendChild(script);
+}
+
+// Book schema info to include in each book page
+function injectBookJsonLd(book) {
+    const data = {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": book.title,
+        "author": { "@type": "Organization", "name": book.author },
+        "publisher": { "@type": "Organization", "name": siteName },
+        "description": book.description,
+        "url": siteUrl + book.link,
+        "image": siteUrl + "assets/images/" + book.cover,
+        "inLanguage": "en",
+        "datePublished": book.published,
+        "bookFormat": "https://schema.org/EBook"
+    };
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.text = JSON.stringify(data);
+    document.head.appendChild(script);
 }
